@@ -1,301 +1,620 @@
 /* ========================================
-   TLV Bet - Responsive Styles
+   TLV Bet - Supreme Bet
+   Responsive Stylesheet
+   Breakpoints: 1200, 1024, 768, 480
    ======================================== */
 
-/* ---- Tablet (max-width: 1024px) ---- */
-@media (max-width: 1024px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+/* ---- Max 1200px ---- */
+@media (max-width: 1200px) {
+    .hero__inner {
+        gap: 40px;
     }
 
-    .hero-text h1 {
-        font-size: 2.8rem;
+    .hero__3d-shield {
+        width: 260px;
+        height: 312px;
     }
 
-    .hero-subtitle {
-        margin: 0 auto 30px;
+    .vip__podium {
+        gap: 16px;
     }
 
-    .hero-cta {
-        justify-content: center;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .hero-image {
-        display: none;
-    }
-
-    .matches-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .live-games-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .casino-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .promos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .vip-tiers {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .footer__top {
+        grid-template-columns: 1.2fr 2.8fr;
+        gap: 36px;
     }
 }
 
-/* ---- Mobile Large (max-width: 768px) ---- */
-@media (max-width: 768px) {
+/* ---- Max 1024px ---- */
+@media (max-width: 1024px) {
     :root {
-        --section-padding: 60px 0;
+        --section-padding: 70px 0;
     }
 
-    /* Navigation */
-    .nav-menu {
+    /* Header - Mobile Nav */
+    .header__nav {
         position: fixed;
-        top: 0;
+        top: 72px;
         right: -100%;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
-        background: var(--dark-1);
+        width: 280px;
+        height: calc(100vh - 72px);
+        background: rgba(17, 17, 17, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(212, 168, 67, 0.1);
         flex-direction: column;
-        align-items: flex-start;
-        padding: 100px 30px 30px;
-        gap: 0;
-        transition: var(--transition-slow);
-        z-index: 998;
-        border-left: 1px solid rgba(212, 168, 67, 0.15);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        justify-content: flex-start;
+        padding: 24px;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 999;
+        overflow-y: auto;
     }
-
-    .nav-menu.active {
+    .header__nav.open {
         right: 0;
     }
 
-    .nav-link {
+    .header__menu {
+        flex-direction: column;
+        gap: 4px;
         width: 100%;
-        padding: 14px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-        border-radius: 0;
-        font-size: 1.1rem;
     }
 
-    .nav-actions {
+    .header__link {
+        display: block;
+        padding: 14px 18px;
+        border-radius: var(--radius-sm);
+        font-size: 1.05rem;
+        width: 100%;
+    }
+    .header__link:hover,
+    .header__link.active {
+        background: rgba(212, 168, 67, 0.08);
+    }
+    .header__link::after {
         display: none;
     }
 
-    .hamburger {
+    .header__hamburger {
         display: flex;
     }
 
-    /* Mobile Nav Actions inside menu */
-    .nav-menu.active::after {
-        content: '';
-        display: block;
-        width: 100%;
-        margin-top: 20px;
+    /* Hero */
+    .hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-bottom: 80px;
+    }
+
+    .hero__content {
+        order: 1;
+    }
+
+    .hero__visual {
+        order: 2;
+        display: none;
+    }
+
+    .hero__badge {
+        justify-content: center;
+    }
+
+    .hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero__cta {
+        justify-content: center;
+    }
+
+    .hero__stats {
+        justify-content: center;
+    }
+
+    .hero__bg-shield {
+        width: 400px;
+        height: 480px;
+        opacity: 0.3;
+    }
+
+    /* Sports */
+    .sports__grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    /* Casino */
+    .casino__grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* VIP */
+    .vip__podium {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: stretch;
+    }
+    .vip__tier--bronze,
+    .vip__tier--silver,
+    .vip__tier--gold,
+    .vip__tier--diamond {
+        min-height: auto;
+    }
+
+    /* Trust */
+    .trust__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Payments */
+    .payments__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Footer */
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .footer__brand {
+        text-align: center;
+    }
+    .footer__logo {
+        justify-content: center;
+    }
+    .footer__desc {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .footer__social {
+        justify-content: center;
+    }
+    .footer__links {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ---- Max 768px ---- */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 0;
+        --container-padding: 0 16px;
+    }
+
+    /* Header */
+    .header__logo-img {
+        width: 36px;
+        height: 36px;
+    }
+    .header__shield {
+        width: 28px;
+    }
+    .header__brand {
+        font-size: 1.15rem;
+    }
+
+    .header__actions .btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
     }
 
     /* Hero */
     .hero {
-        min-height: 80vh;
+        min-height: 90vh;
     }
-
-    .hero-text h1 {
-        font-size: 2.2rem;
+    .hero__title {
+        font-size: clamp(2rem, 7vw, 3rem);
     }
-
-    .hero-subtitle {
+    .hero__subtitle {
         font-size: 1rem;
     }
+    .hero__stats {
+        gap: 24px;
+    }
+    .hero__stat-num {
+        font-size: 1.3rem;
+    }
 
-    .hero-cta {
+    /* Section headers */
+    .section-header {
+        margin-bottom: 36px;
+    }
+    .section-header__title {
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
+    }
+    .section-header__sub {
+        font-size: 0.95rem;
+    }
+
+    /* Sports */
+    .sports__tabs {
+        gap: 6px;
+        margin-bottom: 28px;
+    }
+    .sports__tab {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+    .sports__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Casino */
+    .casino__grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+    }
+    .casino-card {
+        height: 260px;
+    }
+
+    /* Promotions */
+    .golden-ticket {
+        width: 270px;
+    }
+
+    /* VIP */
+    .vip__podium {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Trust */
+    .trust__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .trust__counter-num {
+        font-size: 1.6rem;
+    }
+
+    /* Payments */
+    .payments__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .payments__badges {
+        gap: 16px;
         flex-direction: column;
         align-items: center;
     }
 
-    .hero-cta .btn {
-        width: 100%;
-        max-width: 300px;
+    /* FAQ */
+    .faq__question {
+        padding: 14px 16px;
+        font-size: 0.92rem;
+    }
+    .faq__answer p {
+        padding: 0 16px 14px;
+        font-size: 0.88rem;
     }
 
-    .hero-stats {
-        gap: 24px;
+    /* CTA Banner */
+    .cta-banner {
+        padding: 70px 0;
     }
-
-    .stat-number {
-        font-size: 1.6rem;
+    .cta-banner__title {
+        font-size: clamp(1.6rem, 5vw, 2.4rem);
     }
-
-    /* Top Bar */
-    .top-bar {
-        display: none;
+    .cta-banner__text {
+        font-size: 1rem;
     }
-
-    /* Sections */
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .matches-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .live-games-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .casino-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .promos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .vip-tiers {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Footer */
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-col ul {
-        margin-bottom: 10px;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .vip-perks {
-        text-align: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-    }
-
-    /* CTA */
-    .cta-content h2 {
-        font-size: 2rem;
-    }
-
-    /* Payment */
-    .payment-icons {
-        gap: 10px;
-    }
-
-    .payment-item {
-        padding: 10px 18px;
-    }
-}
-
-/* ---- Mobile Small (max-width: 480px) ---- */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-badge {
-        font-size: 0.8rem;
-        padding: 6px 14px;
-    }
-
-    .section-header h2 {
-        font-size: 1.7rem;
-    }
-
-    .casino-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .live-games-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .vip-tiers {
-        grid-template-columns: 1fr;
-    }
-
-    .sports-categories {
-        gap: 8px;
-    }
-
-    .sport-tab {
-        padding: 10px 16px;
-        font-size: 0.85rem;
-    }
-
-    .sport-tab span:last-child {
-        display: none;
-    }
-
-    .btn-lg {
-        padding: 14px 28px;
+    .cta-banner__btn {
+        padding: 14px 36px;
         font-size: 1rem;
     }
 
+    /* Footer */
+    .footer__links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
     /* Modal */
-    .modal-content {
-        padding: 30px 20px;
-        width: 95%;
+    .modal__content {
+        margin: 16px;
+        padding: 28px 24px;
+        max-width: 100%;
+        border-radius: var(--radius-md);
     }
 
-    .form-row-2 {
-        grid-template-columns: 1fr;
-    }
-
-    /* Ticker */
-    .ticker-item {
-        padding: 6px 14px;
-        font-size: 0.85rem;
-    }
-
-    /* FAQ */
-    .faq-question {
-        font-size: 0.95rem;
+    /* Section divider */
+    .section-divider svg {
+        height: 40px;
     }
 }
 
-/* ---- Hover effects only on non-touch devices ---- */
-@media (hover: hover) {
-    .match-card:hover,
-    .live-game-card:hover,
-    .casino-card:hover,
-    .promo-card:hover,
-    .vip-card:hover,
-    .feature-card:hover {
-        transform: translateY(-4px);
+/* ---- Max 480px ---- */
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 48px 0;
+        --container-padding: 0 14px;
+    }
+
+    /* Header */
+    .header {
+        height: 64px;
+    }
+    .header__inner {
+        height: 64px;
+    }
+    .header__nav {
+        top: 64px;
+        height: calc(100vh - 64px);
+    }
+    .header__shield {
+        display: none;
+    }
+    .header__logo-img {
+        width: 32px;
+        height: 32px;
+    }
+    .header__brand {
+        font-size: 1.05rem;
+    }
+
+    .header__actions .btn--outline-gold {
+        display: none;
+    }
+    .header__actions .btn--gold {
+        padding: 6px 16px;
+        font-size: 0.78rem;
+    }
+
+    /* Hero */
+    html {
+        scroll-padding-top: 64px;
+    }
+    .hero {
+        padding-top: 64px;
+        min-height: auto;
+        padding-bottom: 0;
+    }
+    .hero__inner {
+        padding-top: 32px;
+        padding-bottom: 60px;
+    }
+    .hero__badge {
+        font-size: 0.78rem;
+        padding: 5px 14px;
+        margin-bottom: 18px;
+    }
+    .hero__title {
+        font-size: clamp(1.7rem, 8vw, 2.4rem);
+        margin-bottom: 14px;
+    }
+    .hero__subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+    }
+    .hero__cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    .hero__cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .hero__stat {
+        min-width: 80px;
+    }
+    .hero__stat-num {
+        font-size: 1.1rem;
+    }
+    .hero__stat-label {
+        font-size: 0.7rem;
+    }
+
+    .hero__bg-shield {
+        width: 280px;
+        height: 336px;
+    }
+
+    /* Ticker */
+    .live-ticker__header-inner {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .live-ticker__title {
+        font-size: 0.8rem;
+    }
+    .ticker-item {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    /* Sports */
+    .sports__tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .sports__tabs::-webkit-scrollbar {
+        display: none;
+    }
+    .sports__tab {
+        flex-shrink: 0;
+        padding: 7px 12px;
+        font-size: 0.78rem;
+    }
+
+    .bet-slip__body {
+        padding: 14px 12px;
+    }
+    .bet-slip__team-name {
+        font-size: 0.85rem;
+    }
+    .bet-slip__score {
+        font-size: 1.4rem;
+    }
+    .odds-chip {
+        padding: 8px 6px;
+    }
+    .odds-chip__value {
+        font-size: 0.9rem;
+    }
+
+    /* Casino */
+    .casino__filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .casino__filters::-webkit-scrollbar {
+        display: none;
+    }
+    .casino__filter {
+        flex-shrink: 0;
+        padding: 6px 14px;
+        font-size: 0.78rem;
+    }
+    .casino__grid {
+        grid-template-columns: 1fr;
+    }
+    .casino-card {
+        height: 240px;
+    }
+
+    /* Promotions */
+    .golden-ticket {
+        width: 250px;
+    }
+    .golden-ticket__title {
+        font-size: 1rem;
+    }
+    .golden-ticket__desc {
+        font-size: 0.8rem;
+    }
+    .golden-ticket__value {
+        font-size: 1.2rem;
+    }
+
+    /* VIP */
+    .vip__tier {
+        padding: 24px 16px;
+    }
+    .vip__tier-shield {
+        width: 56px;
+        height: 67px;
+    }
+    .vip__tier-perks li {
+        font-size: 0.8rem;
+    }
+
+    /* Trust */
+    .trust {
+        padding: 48px 0;
+    }
+    .trust__counter {
+        padding: 20px 12px;
+    }
+    .trust__counter-num {
+        font-size: 1.3rem;
+    }
+    .trust__counter-label {
+        font-size: 0.75rem;
+    }
+
+    /* Payments */
+    .payments__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    .payment-method {
+        padding: 12px 10px;
+        font-size: 0.78rem;
+        gap: 6px;
+    }
+    .payment-method .material-symbols-outlined {
+        font-size: 1.1rem;
+    }
+
+    /* FAQ */
+    .faq__question {
+        padding: 12px 14px;
+        font-size: 0.88rem;
+    }
+
+    /* CTA */
+    .cta-banner {
+        padding: 50px 0;
+    }
+    .cta-banner__btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding-top: 40px;
+    }
+    .footer__links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .footer__col-title {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+    .footer__col a {
+        font-size: 0.82rem;
+    }
+    .footer__copyright {
+        font-size: 0.78rem;
+    }
+    .footer__disclaimer {
+        font-size: 0.72rem;
+    }
+
+    /* Back to top */
+    .back-to-top {
+        bottom: 16px;
+        left: 16px;
+        width: 44px;
+        height: 53px;
+    }
+
+    /* Modal */
+    .modal__content {
+        margin: 12px;
+        padding: 24px 18px;
+    }
+    .modal__title {
+        font-size: 1.3rem;
+    }
+    .modal__shield {
+        width: 48px;
+        height: 58px;
+    }
+}
+
+/* ---- Hover effects only on pointer devices ---- */
+@media (hover: hover) and (pointer: fine) {
+    .casino-card:hover .casino-card__inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Touch devices - tap to flip casino cards */
+@media (hover: none) {
+    .casino-card .casino-card__inner {
+        transform: none;
+    }
+    .casino-card.flipped .casino-card__inner {
+        transform: rotateY(180deg);
     }
 }
 
@@ -307,34 +626,116 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 
-    .floating {
-        animation: none;
-    }
-
-    .ticker-track {
-        animation: none;
-    }
-
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-/* ---- Print ---- */
-@media print {
-    .main-header,
-    .top-bar,
-    .live-ticker,
-    .back-to-top,
-    .hero-particles,
-    .modal {
+    .hero__particles .particle {
         display: none !important;
     }
 
+    .live-ticker__items {
+        animation: none !important;
+    }
+
+    .casino-card:hover .casino-card__inner,
+    .casino-card.flipped .casino-card__inner {
+        transform: none;
+    }
+
+    .gold-text {
+        animation: none !important;
+        background-size: 100% auto;
+    }
+
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .cta-banner__bg {
+        animation: none !important;
+    }
+
+    .golden-ticket__ornament-top,
+    .golden-ticket__ornament-bottom {
+        animation: none !important;
+    }
+}
+
+/* ---- Print Styles ---- */
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
     body {
-        background: white;
-        color: black;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .header,
+    .live-ticker,
+    .hero__particles,
+    .hero__bg-shield,
+    .hero__visual,
+    .section-divider,
+    .section-shield-bg,
+    .back-to-top,
+    .modal,
+    .cta-banner,
+    .header__hamburger,
+    .footer__social,
+    .vip__glow,
+    .casino__felt-overlay {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .sports__grid,
+    .casino__grid,
+    .vip__podium,
+    .trust__grid,
+    .payments__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .promotions__track {
+        flex-wrap: wrap;
+    }
+
+    .golden-ticket {
+        page-break-inside: avoid;
     }
 }
