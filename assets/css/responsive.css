@@ -12,9 +12,13 @@ html, body {
 
 /* ---- Max 1200px ---- */
 @media (max-width: 1200px) {
+    .hero__inner {
+        gap: 40px;
+    }
+
     .hero__3d-shield {
-        width: 350px;
-        height: 420px;
+        width: 260px;
+        height: 312px;
     }
 
     .vip__podium {
@@ -82,7 +86,35 @@ html, body {
 
     /* Hero */
     .hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
         padding-bottom: 80px;
+    }
+
+    .hero__content {
+        order: 1;
+    }
+
+    .hero__visual {
+        order: 2;
+        display: none;
+    }
+
+    .hero__badge {
+        justify-content: center;
+    }
+
+    .hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero__cta {
+        justify-content: center;
+    }
+
+    .hero__stats {
+        justify-content: center;
     }
 
     .hero__bg-shield {
@@ -172,7 +204,10 @@ html, body {
         min-height: 85vh;
     }
     .hero__title {
-        font-size: clamp(2rem, 7vw, 3rem);
+        font-size: clamp(1.8rem, 5.5vw, 2.6rem);
+    }
+    .hero__title-line {
+        white-space: normal;
     }
     .hero__subtitle {
         font-size: 1rem;
