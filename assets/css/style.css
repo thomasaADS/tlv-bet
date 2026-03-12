@@ -498,7 +498,7 @@ ul, ol {
     align-items: center;
     background:
         linear-gradient(165deg, rgba(10,10,10,0.92) 0%, rgba(26,26,26,0.88) 40%, rgba(107,15,26,0.85) 100%),
-        url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1611952053688-d5eb9d2f6200?w=1920&q=80') center/cover no-repeat;
     overflow: hidden;
     padding-top: 72px;
 }
@@ -1137,22 +1137,22 @@ ul, ol {
     background-position: center;
 }
 .casino-card[data-image="roulette"] .casino-card__front {
-    background: linear-gradient(180deg, rgba(26,26,26,0.7) 0%, rgba(34,34,34,0.9) 100%), url('https://images.unsplash.com/photo-1596838132731-3301c3ef8d10?auto=format&fit=crop&w=600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(26,26,26,0.6) 0%, rgba(34,34,34,0.85) 100%), url('https://images.unsplash.com/photo-1592602944193-0848995f4b5a?w=600&q=80') center/cover;
 }
 .casino-card[data-image="blackjack"] .casino-card__front {
-    background: linear-gradient(180deg, rgba(26,26,26,0.7) 0%, rgba(34,34,34,0.9) 100%), url('https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(26,26,26,0.6) 0%, rgba(34,34,34,0.85) 100%), url('https://images.unsplash.com/photo-1620023652673-67fdb13dfe2a?w=600&q=80') center/cover;
 }
 .casino-card[data-image="baccarat"] .casino-card__front {
-    background: linear-gradient(180deg, rgba(26,26,26,0.7) 0%, rgba(34,34,34,0.9) 100%), url('https://images.unsplash.com/photo-1541278107931-e006523892df?auto=format&fit=crop&w=600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(26,26,26,0.6) 0%, rgba(34,34,34,0.85) 100%), url('https://images.unsplash.com/photo-1626012133174-2ea0987148fc?w=600&q=80') center/cover;
 }
 .casino-card[data-image="poker"] .casino-card__front {
-    background: linear-gradient(180deg, rgba(26,26,26,0.65) 0%, rgba(34,34,34,0.9) 100%), url('https://images.unsplash.com/photo-1609743522653-52354461eb27?auto=format&fit=crop&w=600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(26,26,26,0.55) 0%, rgba(34,34,34,0.85) 100%), url('https://images.unsplash.com/photo-1551368998-d349c755c74c?w=600&q=80') center/cover;
 }
 .casino-card[data-image="slots"] .casino-card__front {
-    background: linear-gradient(180deg, rgba(26,26,26,0.65) 0%, rgba(34,34,34,0.9) 100%), url('https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(26,26,26,0.55) 0%, rgba(34,34,34,0.85) 100%), url('https://images.unsplash.com/photo-1521059050443-41cbffd7bde5?w=600&q=80') center/cover;
 }
 .casino-card[data-image="lightning"] .casino-card__front {
-    background: linear-gradient(180deg, rgba(26,26,26,0.65) 0%, rgba(34,34,34,0.9) 100%), url('https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?auto=format&fit=crop&w=600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(26,26,26,0.55) 0%, rgba(34,34,34,0.85) 100%), url('https://images.unsplash.com/photo-1497879332819-0c31381c0dad?w=600&q=80') center/cover;
 }
 .casino-card__front::before {
     content: '';
@@ -1393,7 +1393,7 @@ ul, ol {
     padding: var(--section-padding);
     background:
         linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.85) 50%, rgba(10,10,10,0.95) 100%),
-        url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1611578490626-d4bacc1215be?w=1920&q=80') center/cover no-repeat;
     overflow: hidden;
 }
 
@@ -1727,7 +1727,7 @@ ul, ol {
     inset: 0;
     background:
         linear-gradient(135deg, rgba(107,15,26,0.9), rgba(17,17,17,0.85) 40%, rgba(107,15,26,0.9)),
-        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1705593973313-75de7bf95b56?w=1920&q=80') center/cover no-repeat;
     background-size: 200% 200%, cover;
     animation: ctaGradient 6s ease-in-out infinite;
     z-index: 0;
