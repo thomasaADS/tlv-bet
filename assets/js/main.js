@@ -613,4 +613,24 @@ document.addEventListener('DOMContentLoaded', () => {
         copyrightEl.innerHTML = copyrightEl.innerHTML.replace(/\d{4}/, year);
     }
 
+    // =========================================
+    // FLOATING WHATSAPP TOGGLE
+    // =========================================
+    const whatsappToggle = document.getElementById('whatsappToggle');
+    const whatsappMenu = document.getElementById('whatsappMenu');
+    if (whatsappToggle && whatsappMenu) {
+        whatsappToggle.addEventListener('click', () => {
+            const isOpen = whatsappMenu.classList.toggle('active');
+            whatsappToggle.setAttribute('aria-expanded', isOpen);
+            whatsappMenu.setAttribute('aria-hidden', !isOpen);
+        });
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.whatsapp-float')) {
+                whatsappMenu.classList.remove('active');
+                whatsappToggle.setAttribute('aria-expanded', 'false');
+                whatsappMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    }
+
 });
