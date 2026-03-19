@@ -84,13 +84,28 @@ html, body {
         display: flex;
     }
 
-    /* Hero - force everything centered */
+    /* Hero - force full center on mobile/tablet */
+    .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero > .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
     .hero__inner {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center;
         padding-bottom: 80px;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .hero__content {
@@ -98,16 +113,15 @@ html, body {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
+        width: 100% !important;
+        box-sizing: border-box;
+        padding-inline: 16px;
     }
 
     .hero__visual {
         order: 2;
         display: flex !important;
         justify-content: center !important;
-        align-items: center !important;
         width: 100%;
     }
 
@@ -118,7 +132,9 @@ html, body {
     }
 
     .hero__badge {
+        display: inline-flex !important;
         justify-content: center;
+        align-self: center !important;
     }
 
     .hero__title {
@@ -127,31 +143,37 @@ html, body {
     }
 
     .hero__subtitle {
-        margin-left: auto;
-        margin-right: auto;
         text-align: center !important;
         max-width: 100%;
+        width: 100%;
     }
 
     .hero__cta {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        width: 100%;
-        max-width: 400px;
+        width: 100% !important;
+        max-width: 380px;
+        padding: 0 !important;
     }
 
     .hero__cta-btn {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center;
     }
 
     .hero__stats {
         display: flex !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
         text-align: center;
         width: 100%;
+    }
+
+    .hero__stat {
+        text-align: center;
     }
 
     .hero__bg-shield {
@@ -498,8 +520,8 @@ html, body {
     .hero__cta {
         gap: 10px;
         margin-bottom: 32px;
-        padding: 0 16px;
-        max-width: 100%;
+        max-width: 100% !important;
+        padding: 0 !important;
     }
     .hero__cta-btn {
         width: 100%;
